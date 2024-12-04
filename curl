@@ -1,0 +1,14 @@
+curl -X POST http://localhost:8081/login \
+-H "Content-Type: application/json" \
+-d '{"username": "admin", "password": "password"}'
+
+
+curl -X GET http://localhost:8081/hello
+
+
+curl -X GET http://localhost:8081/hello \
+-H "Authorization: invalid_token"
+
+
+curl -X GET http://localhost:8081/hello \
+-H "Authorization: <your_token>"
